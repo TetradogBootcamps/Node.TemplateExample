@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express=require('express');
 const hbs=require('hbs');
 
@@ -30,4 +32,4 @@ app.get('/elements',(req,res)=>{
 });
 app.use(express.static('public'));
 
-app.listen(8080);
+app.listen(process.env.PORT);
